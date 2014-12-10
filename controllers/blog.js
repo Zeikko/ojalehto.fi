@@ -1,18 +1,13 @@
 'use strict';
 
-var contentful = require('contentful');
-console.log(process.env);
-var client = contentful.createClient({
-  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-  space: process.env.CONTENTFUL_SPACE
-});
+var contentful = require('../services/contentful').client;
 
-exports.index = function(req, res) {
-  client.entries({
+exports.index = function(req, res, next) {
+  contentful.entries({
     limit: 10
   }, function(err, posts) {
     if (err) {
-      console.log(err);
+      return next(err);
     } else {
       res.render('blog/index.html', {
         posts: posts
