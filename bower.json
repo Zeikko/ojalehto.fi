@@ -14,7 +14,7 @@
   ],
   "dependencies": {
     "bootstrap": "~3.3.4",
-    "startbootstrap-clean-blog": "git@github.com:Zeikko/startbootstrap-clean-blog.git#~1.0.4",
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "origoni-startbootstrap-clean-blog": "~1.0.3"
   }
 }
