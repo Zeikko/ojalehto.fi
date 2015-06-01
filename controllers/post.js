@@ -15,7 +15,6 @@ exports.render = function(req, res, next) {
             res.render('post', {
                 similars: data.similars,
                 author: data.author,
-                image: post.getImage('blog.image').views.wide.url,
                 post: post
             });
         });

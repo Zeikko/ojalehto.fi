@@ -5,11 +5,11 @@
     <meta property="og:title" content="{{post.getText('blog.title')}} | www.ojalehto.fi'" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://www.ojalehto.fi/post/{{post.slug}}/{{post.id}}" />
-    <meta property="og:image" content="{{image}}" />
+    <meta property="og:image" content="{{post.getImage('blog.image').views.facebook.url}}" />
 {% endblock %}
 
 {% block image %}
-{{image}}
+{{post.getImage('blog.image').views.wide.url}}
 {% endblock %}
 
 {% block heading %}
