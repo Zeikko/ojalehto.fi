@@ -1,0 +1,54 @@
+.intro-header .post-heading.dark * {
+    color: #404040;
+    border-color: #404040;
+}
+
+.intro-header .post-heading.bright * {
+    color: #FFF;
+    border-color: #404040;
+}
+
+.navbar-custom {
+    background-color: rgba(255, 255, 255, .9);
+}
+
+.navbar-custom * {
+    color: #404040 !important;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+}
+
+.post-preview>a>.post-title,
+.post-preview>a>.post-title h1 {
+    margin-top: 0;
+}
+
+.heading-wrapper {
+    height: 400px;
+}
+
+.intro-header .site-heading,
+.intro-header .post-heading,
+.intro-header .page-heading {
+    padding: 0;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 60%;
+}
+
+.intro-header .site-heading {
+    height: 40%;
+}
+
+.intro-header {
+    -webkit-background-size: inherit;
+    -moz-background-size: inherit;
+    background-size: inherit;
+    -o-background-size: inherit;
+}

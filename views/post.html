@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+    <title>{{post.getText('blog.title')}} | www.ojalehto.fi</title>
+    <meta property="og:title" content="{{post.getText('blog.title')}} | www.ojalehto.fi'" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.ojalehto.fi/{{post.slug}}/{{post.id}}" />
+    <meta property="og:image" content="{{image}}" />
+{% endblock %}
+
+{% block image %}
+{{image}}
+{% endblock %}
+
+{% block heading %}
+	<div class="post-heading {{post.getText('blog.titleColor')}}">
+	    <h1>{{post.getText('blog.title')}}</h1>
+        <span class="subheading">{{post.html('blog.shortlede')}}</span>
+        <span class="meta">Posted in {{post.date('blog.date')}}</span>
+	</div>
+{% endblock %}
+
+{% block content %}
+    <article>
+        <div class="row">
+            <div class="col-md-9">
+                <p>{{post.html('blog.body')}}</p>
+                <div>{{author.getText('author.full_name')}}</div>
+            </div>
+            <div class="col-md-3">
+                <h3>Similar Posts</h3>
+                <ul>
+                    <li>
+                    	{% for similar in similars %}
+	                        <a href="/post/{{similar.slug}}/{{similar.id}}">
+	                            <div>{{similar.getText('blog.title')}}</div>
+	                        </a>
+                        {% endfor %}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </article>
+{% endblock %}

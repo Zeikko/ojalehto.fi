@@ -1,4 +1,40 @@
 {% extends 'layout.html' %}
+
+{% block head %}
+    <title>Blog | www.ojalehto.fi</title>
+    <meta property="og:title" content="Blog | www.ojalehto.fi'" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.ojalehto.fi/" />
+    <meta property="og:image" content="{{image}}" />
+{% endblock %}
+
+{% block image %}
+{{image}}
+{% endblock %}
+
+{% block heading %}
+	<div class="site-heading">
+	    <h1>Blog</h1>
+	    <hr class="small">
+	    <span class="subheading"></span>
+	</div>
+{% endblock %}
+
 {% block content %}
-	<h1>Index</h1>
+	{% for post in posts %}
+		<article>
+		    <div class="row">
+		        <div class="col-xs-2 image-wrapper">
+		            <img class="img-rounded" src="{{post.fragments['blog.image'].value.views.icon.url}}" alt="{{post.fragments['blog.image'].value.main.alt}}" />
+		        </div>
+		        <div class="col-xs-10 post-preview">
+		            <a href="/post/{{post.slug}}/{{post.id}}">
+		                <h2 class="post-title">{{post.html('blog.title')}}</h2>
+		                <h3 class="post-subtitle">{{post.html('blog.shortlede')}}</h3>
+		            </a>
+		            <p class="post-meta">Posted in {{post.date('blog.date')}}</p>
+		        </div>
+		    </div>
+		</article>
+	{% endfor %}
 {% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+    <title>Hacks | www.ojalehto.fi</title>
+    <meta property="og:title" content="Hacks | www.ojalehto.fi'" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.ojalehto.fi/hacks" />
+    <meta property="og:image" content="{{image}}" />
+{% endblock %}
+
+{% block image %}
+{{image}}
+{% endblock %}
+
+{% block heading %}
+    <div class="site-heading">
+        <h1>Hacks</h1>
+        <hr class="small">
+        <span class="subheading"></span>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <article>
+        <div class="row">
+            <p>This is a place where i will document little hacks and projects that i have been working on.</p>
+        </div>
+    </article>
+{% endblock %}

@@ -1,0 +1,20 @@
+{
+  "name": "www.ojalehto.fi",
+  "version": "0.0.0",
+  "authors": [
+    "Jaakko Ojalehto <jaakko@ojalehto.fi>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "startbootstrap-clean-blog": "git@github.com:Zeikko/startbootstrap-clean-blog.git#~1.0.4",
+    "jquery": "~2.1.4"
+  }
+}
