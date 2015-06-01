@@ -15,6 +15,7 @@
   "dependencies": {
     "bootstrap": "~3.3.4",
     "jquery": "~2.1.4",
-    "origoni-startbootstrap-clean-blog": "~1.0.3"
+    "origoni-startbootstrap-clean-blog": "~1.0.3",
+    "skrollr": "~0.6.29"
   }
 }

@@ -41,7 +41,7 @@
         </div>
         <!-- /.container -->
     </nav>
-	<header class="intro-header" style="background-image: url({% block image %}{% endblock %})">
+	<header class="intro-header" data-0="background-position-y:0px;" data-400="background-position-y:-200px;" style="background-image: url({% block image %}{% endblock %})">
 	    <div class="container">
 	        <div class="row">
 	            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 heading-wrapper">
@@ -59,9 +59,13 @@
         <div class="container">
         </div>
     </div>
+    <script src="/lib/skrollr/dist/skrollr.min.js"></script>
     <script src="/lib/jquery/dist/jquery.js"></script>
     <script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
     <script src="/lib/origoni-startbootstrap-clean-blog/js/clean-blog.min.js"></script>
+    <script type="text/javascript">
+        var s = skrollr.init();
+    </script>
 </body>
 
 </html>
