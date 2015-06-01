@@ -54,8 +54,8 @@ function addFunctionsToObjects(objects) {
                 var html = this.getStructuredText(fragment).asHtml({
                     linkResolver: config.linkResolver
                 });
-                html = html.replace(/^(<[A-z][0-9]>)/, '');
-                html = html.replace(/(<[A-z][0-9]>)$/, '');
+                html = html.replace(/^<([A-z])+([0-9])*>/, '');
+                html = html.replace(/<([A-z])+([0-9])*>$/, '');
                 return html;
             };
             object.date = function(fragment) {

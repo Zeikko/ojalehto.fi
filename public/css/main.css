@@ -25,6 +25,10 @@
     margin-top: 0;
 }
 
+.post-preview {
+    margin-bottom: 30px;
+}
+
 .heading-wrapper {
     height: 400px;
 }
