@@ -56,3 +56,6 @@
     background-size: inherit;
     -o-background-size: inherit;
 }
+.footer {
+    min-height: 50px;
+}
