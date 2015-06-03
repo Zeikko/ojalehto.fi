@@ -30,13 +30,13 @@
             <div class="col-md-3">
                 <h3>Similar Posts</h3>
                 <ul>
+                    {% for similar in similars %}
                     <li>
-                    	{% for similar in similars %}
-	                        <a href="/post/{{similar.slug}}/{{similar.id}}">
-	                            <div>{{similar.getText('blog.title')}}</div>
-	                        </a>
-                        {% endfor %}
+	                    <a href="/post/{{similar.slug}}/{{similar.id}}">
+	                        <div>{{similar.getText('blog.title')}}</div>
+	                    </a>
                     </li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
